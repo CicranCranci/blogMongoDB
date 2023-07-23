@@ -1,0 +1,25 @@
+<%- include('partials/header') %>
+
+    <div class="text-center">
+        <h1>Home</h1>
+        <p>
+            <%= homeStartingContent %>
+        </p>
+    </div>
+
+    <div class="text-center">
+        <h1>Posts</h1>
+        <% posts.forEach((post)=> { %>
+            <h2>
+                <%= post.composeTitle %>
+            </h2>
+            <p>
+                <%= post.composeContent.slice(0, 100) + '...' %>
+            </p>
+            <!-- Add link to read more -->
+            <a href="/posts/<%= post._id %>">Read More</a>
+            <hr>
+            <% }); %>
+    </div>
+
+    <%- include('partials/footer') %>

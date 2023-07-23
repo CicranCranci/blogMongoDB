@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>All Posts</title>
+</head>
+
+<body>
+    <h1>All Posts</h1>
+    <% posts.forEach((post)=> { %>
+        <h2>
+            <%= post.composeTitle %>
+        </h2>
+        <p>
+            <%= post.composeContent %>
+        </p>
+        <hr>
+        <% }); %>
+</body>
+
+</html>
